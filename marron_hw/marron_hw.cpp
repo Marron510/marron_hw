@@ -6,23 +6,92 @@
 // 지금만들라고 하는 함수들은
 // strlen
 
-int StringCount(const char* const _Str)
+int NumberCount(int _Value)
 {
-    int Count = 0;
-
-    while (_Str[Count])
-    {
-        Count += 1;
-    }
-
-    return Count;
+	int Result = 0;
+	while (_Value)
+	{
+		_Value /= 10;
+		Result += 1;
+	}
+	return Result;
 }
+
+void NumberToString(char* Buffer, int BufferSize, int _Value)
+
+{
+	int Count = NumberCount(_Value);
+
+	int Value = 3;
+	char ch = Value + '0';
+
+	int CurValue = _Value / 10;
+}
+
+const int IntMaxCount = 10;
+const int ParameterInter = 8;
+
+int MyPrintf(const char* const _Ptr, ...)
+{
+	
+	__int64 FAdd = reinterpret_cast<__int64>(&_Ptr);
+
+	int ChCount = 0;
+
+	while (_Ptr[ChCount])
+	{
+
+		char Ch = _Ptr[ChCount];
+
+		if (Ch == '%')
+		{
+			Ch = _Ptr[ChCount + 1];
+
+			switch (Ch)
+			{
+			case 'd':
+			{
+				int* Ptr = reinterpret_cast<int*>
+					(FAdd += ParameterInter);
+				int ConvertValue = *Ptr;
+
+				char Arr[IntMaxCount] = {};
+				NumberToString(Arr, IntMaxCount, ConvertValue);
+
+
+				MyPrintf("100");
+				ChCount += 2;
+				break;
+
+			}
+			default:
+				break;
+			}
+			
+
+		}
+
+		putchar(_Ptr[ChCount]);
+		ChCount += 1;
+
+	}
+		return ChCount;
+}
+
+
 
 int main()
 {
-    // [B][B][B][B][0]
 
-    int Count = strlen("BBBB");
 
-    int a = 0;
+	MyPrintf("Number : %d|n", 12321);
+	
+	int Value = 123;
+	int MulValue = 1;
+
+
+	
+	//Arr[0] = Value / 100;
+	//Arr[1] = Value / 10;
+	//Arr[2] = Value / 1;
 }
