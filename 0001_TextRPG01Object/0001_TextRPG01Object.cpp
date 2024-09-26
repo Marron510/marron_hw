@@ -21,12 +21,6 @@ const int NAMELEN = 10;
 
 class StatusUnit
 {
-public:
-    char* SetName(const char* _RealName)
-    {
-        int NameLen = strlen(_RealName);
-        
-    }
 protected:
     char Name[NAMELEN] = "NONE";
     int Hp = 100;
@@ -56,22 +50,22 @@ public:
     //}
 
     // MinMax
-    int GetDamage() const
+    int GetDamage(const FightUnit& _AttUnitDamage) const
     {
         // minAtt ~ MaxAtt 사이의 숫자가 리턴되는 함수를 만드세요.
-        return MinAtt + (rand() % (MaxAtt - MinAtt + 1));
+        return MinAtt + rand() % (_AttUnitDamage.MaxAtt - _AttUnitDamage.MinAtt);
     }
 
     // 클래스의 레퍼런스를 넣어주는것이 많은게 간단해 집니다.
     void DamageLogic(const FightUnit& _AttUnit)
     {
         // _AttUnit => 나를 공격하려는 상대
-        Hp -= _AttUnit.GetDamage();
+        Hp -= _AttUnit.GetDamage(_AttUnit);
     }
 
-    void DamageRender(const FightUnit& _AttName) const
+    void DamageRender(const char* const _AttName, int _Att)
     {
-        printf_s("%s 가 공격해서 %d의 데미지를 입혔습니다.\n", _AttName.Name, _AttName.GetDamage());
+        printf_s("%s 가 %s를 공격해서 %d의 데미지를 입혔습니다.\n", _AttName, Name, _Att);
     }
 
     const char* GetName() const
@@ -91,23 +85,11 @@ private:
 
 class Player : public FightUnit
 {
-public:
-    
-    Player(const char* _Name)
-    {
-       
-    }
-
 };
 
 class Monster : public FightUnit
 {
 
-public:
-    Monster()
-    {
-
-    }
 };
 
 
@@ -120,12 +102,9 @@ public:
 int main()
 {
 
-    Player NewPlayer("aaaa");
+    Player NewPlayer;
     Monster NewMonster;
     NewMonster.DamageLogic(NewPlayer);
-    NewMonster.DamageRender(NewPlayer);
-    
-    int a = 0;
 
     // NewPlayer.
 }
