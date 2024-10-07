@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BlackSmith.h" />
     <ClInclude Include="ContentsConst.h" />
     <ClInclude Include="FightUnit.h" />
     <ClInclude Include="FightZone.h" />
@@ -32,6 +33,7 @@
     <ClInclude Include="Zone.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BlackSmith.cpp" />
     <ClCompile Include="ContentsConst.cpp" />
     <ClCompile Include="FightUnit.cpp" />
     <ClCompile Include="FightZone.cpp" />
