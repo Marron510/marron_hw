@@ -11,15 +11,15 @@ public:
 
 	//}
 
+	void TryUpgrade(class UPlayer& _Player);
+
 	void InPlayer(class UPlayer& _Player/*, int& Result*/);
-	
+
 	inline void SetParent(class UZone* _ParentZone)
 	{
 		ParentZone = _ParentZone;
 	}
-	bool Rand();
-	void WeaponUpgrade(class UPlayer& _Player);
-	
+
 private:
 	// class UZone& ParentZone;
 

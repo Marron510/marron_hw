@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{71ace8d5-e978-4500-a84d-ecefa78aec11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Global">
+      <UniqueIdentifier>{4c007d9f-6664-44ee-8619-6fa28005ede8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{875f27c4-e3b1-4817-ac7b-c302a9cde17a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{92261a72-f7d4-4c4a-a99a-48a72ab206b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Actor">
+      <UniqueIdentifier>{d887b2e9-eb3c-4e68-88ac-f99618e5e869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Map">
+      <UniqueIdentifier>{84f31195-6e19-4c48-86e9-e361014c3e17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Actor\Contents">
+      <UniqueIdentifier>{df5cb991-6e35-49f3-8c35-2a6e80ca3f94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Map\Contents">
+      <UniqueIdentifier>{30535478-ccdc-4ff5-85c2-144cd8f76c65}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TextRpgLast.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="TextRpgCore.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Object\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Zone.cpp">
+      <Filter>Object\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Town.cpp">
+      <Filter>Object\Map\Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackSmith.cpp">
+      <Filter>Object\Map\Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="FightZone.cpp">
+      <Filter>Object\Map\Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="FightUnit.cpp">
+      <Filter>Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusUnit.cpp">
+      <Filter>Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Object\Actor\Contents</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Actor.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="TextRpgCore.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Object\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Zone.h">
+      <Filter>Object\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Town.h">
+      <Filter>Object\Map\Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackSmith.h">
+      <Filter>Object\Map\Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="FightZone.h">
+      <Filter>Object\Map\Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="FightUnit.h">
+      <Filter>Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusUnit.h">
+      <Filter>Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Object\Actor\Contents</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -2,9 +2,12 @@
 #include "Player.h"
 #include <BaseSystem/EngineDebug.h>
 #include <conio.h>
+#include <iostream>
+#include "TextRpgCore.h"
 
-void BlackSmith::TryUpgrade(class UPlayer& _Player)
+void BlackSmith::TryUpgrade()
 {
+	UPlayer& _Player = TextRpgCore::GetPlayer();
 	system("cls");
 	// 확률은 전부다 2분의 1
 	// 1돈이 깎여야 한다. 플레이어의 강화 단계 * 100
@@ -79,13 +82,17 @@ void BlackSmith::TryUpgrade(class UPlayer& _Player)
 	_getch();
 }
 
-void BlackSmith::InPlayer(class UPlayer& _Player/*, int& Result*/)
+UZone* BlackSmith::InPlayer()
 {
+	UZone* ParentZone = GetZone(0);
+
 	if (nullptr == ParentZone)
 	{
 		MSGASSERT("부모존이 세팅되지 않았습니다");
-		return;
+		return nullptr;
 	}
+
+	UPlayer& _Player = TextRpgCore::GetPlayer();
 
 	_Player.SetGold(1000000);
 
@@ -101,10 +108,10 @@ void BlackSmith::InPlayer(class UPlayer& _Player/*, int& Result*/)
 		switch (Select)
 		{
 		case '1':
-			TryUpgrade(_Player);
+			TryUpgrade();
 			break;
 		case '2':
-			return;
+			return nullptr;
 		default:
 			break;
 		}

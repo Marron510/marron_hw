@@ -67,21 +67,20 @@ public:
 		CurZoneIndex = _Index;
 	}
 
-	int GetCurZone()
+	int GetCurZone() const
 	{
 		return CurZoneIndex;
 	}
 
-	void SetEquipAtt(int _EquipAtt)
-	{
-		EquipAtt = _EquipAtt;
-	}
-
-	int GetEquipAtt()
+	inline int GetEquipAtt() const
 	{
 		return EquipAtt;
 	}
 
+	inline void SetEquipAtt(int _Value)
+	{
+		EquipAtt = _Value;
+	}
 
 protected:
 
