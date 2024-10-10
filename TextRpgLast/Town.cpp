@@ -4,9 +4,10 @@
 #include "BlackSmith.h"
 #include <iostream>
 #include "TextRpgCore.h"
+#include <BaseSystem/EngineDebug.h>
 
 UTown::UTown()
-// : BS(*this)
+	// : BS(*this)
 {
 	// 보통 이니셜라이즈 과정을 대체할수 있는 함수는 생성자.
 	BS.SetParent(this);
@@ -17,7 +18,7 @@ UZone* UTown::InPlayer()
 {
 	InMsgPrint();
 
-	UPlayer& _Player = TextRpgCore::GetPlayer();
+	APlayer& _Player = TextRpgCore::GetPlayer();
 
 	while (true)
 	{
@@ -42,8 +43,16 @@ UZone* UTown::InPlayer()
 		}
 		case '2':
 		{
-			UZone* NextZone = ConnectingProgress();
-			return NextZone;
+			if (false == IsConnectEmpty())
+			{
+				UZone* NextZone = ConnectingProgress();
+				return NextZone;
+			}
+			else {
+				MSGASSERT("연결된 지역이 하나도 없습니다");
+				return nullptr;
+			}
+
 			break;
 		}
 		case '0':

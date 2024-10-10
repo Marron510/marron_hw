@@ -33,7 +33,7 @@ UZone* UTown::InPlayer(class UPlayer& _Player)
 		case '1':
 		{
 			// 블랙스미스에 지속적으로 정보를 유지시켜줘야 하는 .
-			BS.InPlayer(_Player);
+			BS.InPlayer();
 			break;
 		}
 		case '2':

@@ -2,6 +2,7 @@
 #include "Player.h"
 #include <BaseSystem/EngineDebug.h>
 #include <conio.h>
+#include "TextRpgLast/TextRpgCore.h"
 
 void BlackSmith::TryUpgrade(class UPlayer& _Player)
 {
@@ -79,8 +80,9 @@ void BlackSmith::TryUpgrade(class UPlayer& _Player)
 	_getch();
 }
 
-void BlackSmith::InPlayer(class UPlayer& _Player/*, int& Result*/)
+void BlackSmith::InPlayer()
 {
+	UPlayer & _Player = TextRpgCore::GetPlayer();
 	if (nullptr == ParentZone)
 	{
 		MSGASSERT("부모존이 세팅되지 않았습니다");

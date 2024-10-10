@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{153145be-d1ac-4716-8988-8a588d0229df}</ProjectGuid>
+    <ProjectGuid>{fa1baca2-7e68-48c6-8b3c-d7d7b7aa324b}</ProjectGuid>
     <RootNamespace>TextRpgLast</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -133,8 +133,11 @@
     <ClCompile Include="BlackSmith.cpp" />
     <ClCompile Include="FightUnit.cpp" />
     <ClCompile Include="FightZone.cpp" />
+    <ClCompile Include="GlobalValue.cpp" />
+    <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Orc.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="StatusUnit.cpp" />
     <ClCompile Include="TextRpgCore.cpp" />
@@ -154,8 +157,11 @@
     <ClInclude Include="Enums.h" />
     <ClInclude Include="FightUnit.h" />
     <ClInclude Include="FightZone.h" />
+    <ClInclude Include="GlobalValue.h" />
+    <ClInclude Include="Goblin.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="Orc.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="StatusUnit.h" />
     <ClInclude Include="TextRpgCore.h" />

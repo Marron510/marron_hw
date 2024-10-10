@@ -4,13 +4,12 @@
 // UObject 이름
 // UStatusUnit를 통해서 능력치
 // UFightUnit를 통해서 전투
-class UPlayer : public AActor
+class APlayer : public AActor
 {
 	// 일부러 생성
 
-
 public:
-	UPlayer();
+	APlayer();
 
 	inline int GetEquipAtt() const
 	{
@@ -23,6 +22,8 @@ public:
 	}
 
 	void StatusTextRender() override;
+
+	int GetDamage() const override;
 
 private:
 	int EquipAtt = 0;

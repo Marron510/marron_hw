@@ -13,7 +13,7 @@ public:
 
 	void TryUpgrade(class UPlayer& _Player);
 
-	void InPlayer(class UPlayer& _Player/*, int& Result*/);
+	void InPlayer();
 
 	inline void SetParent(class UZone* _ParentZone)
 	{
