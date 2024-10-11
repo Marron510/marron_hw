@@ -7,6 +7,9 @@
     <ClInclude Include="EngineFile.h">
       <Filter>IO</Filter>
     </ClInclude>
+    <ClInclude Include="EngineMath.h">
+      <Filter>Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EngineDebug.cpp">
@@ -15,6 +18,9 @@
     <ClCompile Include="EngineFile.cpp">
       <Filter>IO</Filter>
     </ClCompile>
+    <ClCompile Include="EngineMath.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Debug">
@@ -22,6 +28,9 @@
     </Filter>
     <Filter Include="IO">
       <UniqueIdentifier>{81110fe2-2e7c-4f25-b16a-c0c851f2a5f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{b39cfa8d-888c-474e-8fd4-9478e7367d24}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
