@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8c4e8ef7-7b11-45f5-a8a4-f4231b067447}</ProjectGuid>
+    <ProjectGuid>{8C4E8EF7-7B11-45F5-A8A4-F4231B067447}</ProjectGuid>
     <RootNamespace>ConsoleGame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -129,25 +129,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="ActorVector.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="ConsoleEngine.cpp" />
     <ClCompile Include="ConsoleGame.cpp" />
     <ClCompile Include="ConsoleImage.cpp" />
     <ClCompile Include="ConsoleWindow.cpp" />
     <ClCompile Include="Enums.cpp" />
     <ClCompile Include="GlobalValue.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Actor.h" />
+    <ClInclude Include="ActorVector.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="ConsoleEngine.h" />
     <ClInclude Include="ConsoleImage.h" />
     <ClInclude Include="ConsoleWindow.h" />
     <ClInclude Include="Enums.h" />
     <ClInclude Include="GlobalValue.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BaseSystem\BaseSystem.vcxproj">
-      <Project>{eb3a7e56-8d0b-4151-957b-420e26d1f148}</Project>
+      <Project>{0acebf45-8515-409b-99de-190cd392a6fc}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
