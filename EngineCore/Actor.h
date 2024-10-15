@@ -1,5 +1,5 @@
 #pragma once
-#include <BaseSystem/EngineMath.h>
+#include <EngineBase/EngineMath.h>
 #include "ConsoleImage.h"
 
 
@@ -24,6 +24,10 @@ public:
 
 	class Renderer* CreateDefaultSubObject();
 
+	class Renderer* GetImageRenderer()
+	{
+		return ImageRenderer;
+	}
 
 protected:
 	// ConsoleImage RenderImage;
