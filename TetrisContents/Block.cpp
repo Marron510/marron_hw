@@ -1,7 +1,7 @@
 #include "Block.h"
 #include <EngineCore/Renderer.h>
 #include <conio.h>
-
+#include <TetrisContents/TetrisImage.h>
 
 void Block::BeginPlay()
 {
@@ -10,6 +10,14 @@ void Block::BeginPlay()
 	Renderer* Render = CreateDefaultSubObject();
 	Render->RenderImage.Create({ 1, 1 }, '@');
 }
+
+void Block::getlocation()
+{
+	
+	Super::GetActorLocation();
+	
+}
+
 
 void Block::Tick()
 {
@@ -46,3 +54,4 @@ void Block::Tick()
 
 
 }
+

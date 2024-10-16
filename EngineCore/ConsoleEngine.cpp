@@ -70,6 +70,7 @@ void ConsoleEngine::Tick()
 
 void ConsoleEngine::Render()
 {
+	// system("cls");
 	Window->Clear();
 
 	ConsoleImage* BackBufferPtr = Window->GetBackBufferPtr();
