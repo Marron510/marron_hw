@@ -5,7 +5,7 @@
 
 class AActor
 {
-	
+
 
 public:
 	virtual void BeginPlay();

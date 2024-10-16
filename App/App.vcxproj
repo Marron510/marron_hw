@@ -134,6 +134,12 @@
     <ProjectReference Include="..\EngineBase\EngineBase.vcxproj">
       <Project>{3e33fafa-2054-4cc0-9e5b-e06f7eb766dd}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\EngineCore\EngineCore.vcxproj">
+      <Project>{eeb50c4d-2af2-4649-a396-61cca9e4e189}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TetrisContents\TetrisContents.vcxproj">
+      <Project>{f8ba27ff-d847-495a-9d68-2d9014785c1c}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

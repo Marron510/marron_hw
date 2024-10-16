@@ -19,10 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\GM2\CPP\TetrisContents\Block.cpp" />
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="TetrisImage.cpp" />
+    <ClCompile Include="TetrisInit.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\GM2\CPP\TetrisContents\Block.h" />
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="TetrisImage.h" />
+    <ClInclude Include="TetrisInit.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -15,13 +15,19 @@ ConsoleEngine::ConsoleEngine()
 
 }
 
-void ConsoleEngine::Start()
+
+// void ConsoleEngine::Start(void(*Ptr)(ConsoleEngine*))
+void ConsoleEngine::Start(class UserInit* _Init)
 {
 	ConsoleEngine Engine;
 
 	MainEngine = &Engine;
 
 	Engine.BeginPlay();
+
+	_Init->UserBeginPlay(&Engine);
+
+	
 
 	while (true == Engine.EngineActive)
 	{
@@ -47,7 +53,11 @@ void ConsoleEngine::BeginPlay()
 	Window = new UConsoleWindow();
 	Window->BeginPlay();
 
-	Window->SetScreenSize({15, 20});
+	// 대리객체 방법이 있습니다.
+
+	// 나중에 배우겠습니다.
+	// 함수포인터로 하는법
+	Window->SetScreenSize({ 10, 10 });
 }
 
 void ConsoleEngine::Tick()
