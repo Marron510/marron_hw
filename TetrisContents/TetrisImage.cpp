@@ -4,6 +4,7 @@
 #include "Block.h"
 
 TetrisImage* TetrisImage::BackImage = nullptr;
+char TetrisImage::DefaultChar = '@';
 
 void TetrisImage::BeginPlay()
 {
@@ -18,7 +19,15 @@ void TetrisImage::BeginPlay()
 
 void TetrisImage::AddBlock(FIntPoint _Pos)
 {
-	Render->RenderImage.SetPixel(_Pos, '@');
+	if ('@' == Render->RenderImage.GetPixel(_Pos.X, _Pos.Y))
+	{
+		_Pos.Y = _Pos.Y - 1;
+		Render->RenderImage.SetPixel(_Pos, '@');
+	}
+	else
+	{
+		Render->RenderImage.SetPixel(_Pos, '@');
+	}
 }
 
 void TetrisImage::Tick()

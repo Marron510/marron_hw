@@ -13,5 +13,6 @@ public:
 	static TetrisImage* BackImage;
 
 	Renderer* Render = nullptr;
+	static char DefaultChar;
 };
 

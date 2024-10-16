@@ -45,15 +45,11 @@ void Block::Tick()
 			if (4 == Super::GetActorLocation().Y)
 			{
 				TetrisImage::BackImage->AddBlock(Super::GetActorLocation());
-				Super::SetActorLocation({0, 0});
-			}
-			if (Super::GetActorLocation().Y)
-			{
+				Super::SetActorLocation({ 0, 0 });
 
 			}
-			
-			
 			break;
+			
 		default:
 			break;
 		}

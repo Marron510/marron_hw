@@ -66,10 +66,15 @@ public:
 
 	void SetPixel(FIntPoint _Pos, char _Char);
 
+	char GetChar()
+	{
+		return Char;
+	}
 private:
 	// 상수 안됩니다.
 	// char** Arr = nullptr;
 	std::vector<std::vector<char>> Pixels;
 	FIntPoint ImageSize;
+	char Char;
 };
 
