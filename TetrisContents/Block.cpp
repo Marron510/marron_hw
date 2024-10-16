@@ -2,7 +2,8 @@
 #include <EngineCore/Renderer.h>
 #include <conio.h>
 #include <TetrisContents/TetrisImage.h>
-
+#include <EngineCore/ConsoleEngine.h>
+#include <EngineCore/ConsoleWindow.h>
 
 void Block::BeginPlay()
 {
@@ -13,7 +14,20 @@ void Block::BeginPlay()
 
 }
 
+void Block::CheckBlock()
+{
+	if (ConsoleEngine::GetEngine().GetWindow()->GetBackBufferRef().GetImageSize().Y - 1 == Super::GetActorLocation().Y)
+	{
+		TetrisImage::BackImage->AddBlock(Super::GetActorLocation());
+		Super::SetActorLocation({ 0, 0 });
+	}
+	else if (TetrisImage::BackImage->Render->RenderImage.GetPixel(GetActorLocation().X, GetActorLocation().Y) == '@')
+	{
+		TetrisImage::BackImage->AddBlock(Super::GetActorLocation().UP);
+	}
 
+
+}
 
 void Block::Tick()
 {
@@ -40,19 +54,13 @@ void Block::Tick()
 			break;
 		case 'S':
 		case 's':
-			
 			AddActorLocation(FIntPoint::DOWN);
-			if (4 == Super::GetActorLocation().Y)
-			{
-				TetrisImage::BackImage->AddBlock(Super::GetActorLocation());
-				Super::SetActorLocation({ 0, 0 });
-
-			}
 			break;
-			
 		default:
 			break;
 		}
+	
+		CheckBlock();
 
 	}
 

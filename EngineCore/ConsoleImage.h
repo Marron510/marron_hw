@@ -65,16 +65,13 @@ public:
 	void Copy(FIntPoint _Offset, ConsoleImage& _Image);
 
 	void SetPixel(FIntPoint _Pos, char _Char);
-
-	char GetChar()
-	{
-		return Char;
-	}
+	void GetPixelChar(FIntPoint _Pos, char _Char);
+	
 private:
 	// 상수 안됩니다.
 	// char** Arr = nullptr;
 	std::vector<std::vector<char>> Pixels;
 	FIntPoint ImageSize;
-	char Char;
+
 };
 
