@@ -3,20 +3,16 @@
 #include <conio.h>
 #include <TetrisContents/TetrisImage.h>
 
+
 void Block::BeginPlay()
 {
 	Super::BeginPlay();
 
 	Renderer* Render = CreateDefaultSubObject();
 	Render->RenderImage.Create({ 1, 1 }, '@');
+
 }
 
-void Block::getlocation()
-{
-	
-	Super::GetActorLocation();
-	
-}
 
 
 void Block::Tick()
@@ -44,13 +40,27 @@ void Block::Tick()
 			break;
 		case 'S':
 		case 's':
+			
 			AddActorLocation(FIntPoint::DOWN);
+			if (4 == Super::GetActorLocation().Y)
+			{
+				TetrisImage::BackImage->AddBlock(Super::GetActorLocation());
+				Super::SetActorLocation({0, 0});
+			}
+			if (Super::GetActorLocation().Y)
+			{
+
+			}
+			
+			
 			break;
 		default:
 			break;
 		}
 
 	}
+
+
 
 
 }
