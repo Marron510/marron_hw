@@ -65,7 +65,7 @@ public:
 	void Copy(FIntPoint _Offset, ConsoleImage& _Image);
 
 	void SetPixel(FIntPoint _Pos, char _Char);
-	void GetPixelChar(FIntPoint _Pos, char _Char);
+	
 	
 private:
 	// 상수 안됩니다.

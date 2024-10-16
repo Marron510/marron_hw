@@ -10,32 +10,40 @@ void Block::BeginPlay()
 	Super::BeginPlay();
 
 	Renderer* Render = CreateDefaultSubObject();
-	Render->RenderImage.Create({ 1, 1 }, '@');
+	Render->RenderImage.Create({ 1, 1 }, 'X');
 
 }
 
 void Block::CheckBlock()
 {
+
+		/*if (ConsoleEngine::GetEngine().GetWindow()->GetBackBufferRef().GetImageSize().Y - 1 == Super::GetActorLocation().Y)
+		{
+			TetrisImage::BackImage->AddBlock(Super::GetActorLocation());
+			Super::SetActorLocation({ 0, 0 });
+		}*/
 	if (ConsoleEngine::GetEngine().GetWindow()->GetBackBufferRef().GetImageSize().Y - 1 == Super::GetActorLocation().Y)
 	{
-		TetrisImage::BackImage->AddBlock(Super::GetActorLocation());
+		TetrisImage::BackImage->Render->RenderImage.Copy(Super::GetActorLocation(), Super::GetImageRenderer()->RenderImage);
 		Super::SetActorLocation({ 0, 0 });
 	}
-	else if (TetrisImage::BackImage->Render->RenderImage.GetPixel(GetActorLocation().X, GetActorLocation().Y) == '@')
+	else if ('X' == ConsoleEngine::GetEngine().GetWindow()->GetBackBufferRef().GetPixel(Super::GetActorLocation().X, Super::GetActorLocation().Y + 1))
 	{
-		TetrisImage::BackImage->AddBlock(Super::GetActorLocation().UP);
+		TetrisImage::BackImage->Render->RenderImage.Copy(Super::GetActorLocation(), Super::GetImageRenderer()->RenderImage);
+		Super::SetActorLocation({ 0, 0 });
 	}
-
-
+		
 }
 
 void Block::Tick()
 {
 	Super::Tick();
-
+	CheckBlock();
+	AddActorLocation(FIntPoint::DOWN);
 	int Value = _kbhit();
 	if (Value != 0)
 	{
+
 		int Select = _getch();
 
 		switch (Select)
@@ -59,11 +67,11 @@ void Block::Tick()
 		default:
 			break;
 		}
-	
-		CheckBlock();
+		
+		
 
 	}
-
+	
 
 
 

@@ -8,9 +8,9 @@ public:
 	void BeginPlay() override;
 	void Tick() override;
 	void CheckBlock();
-
+	
 	
 	Renderer* Render = nullptr;
-	
+
 };
 

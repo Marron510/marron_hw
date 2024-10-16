@@ -10,7 +10,7 @@ void TetrisImage::BeginPlay()
 	Super::BeginPlay();
 
 	Render = CreateDefaultSubObject();
-	Render->RenderImage.Create({ 3, 5 }, 'a');
+	Render->RenderImage.Create({ 6, 10 }, 'O');
 
 	BackImage = this;
 	
@@ -18,7 +18,8 @@ void TetrisImage::BeginPlay()
 
 void TetrisImage::AddBlock(FIntPoint _Pos)
 {
-	Render->RenderImage.SetPixel(_Pos, '@');
+	Render->RenderImage.SetPixel(_Pos, 'X');
+
 }
 
 void TetrisImage::Tick()
