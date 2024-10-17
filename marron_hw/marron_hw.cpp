@@ -1,38 +1,61 @@
 ﻿#include <iostream>
-int arr1[29] = {};
-int arr2[30] = {};
-int a = 0;
-int b = 0;
+
+int arr1[31] = {31,};
+int arr2[29] = {};
+int n = 0;
+int a = 31;
+
+
+
 int main()
 {
+	int b = 0;
 	for (size_t i = 0; i < 28; i++)
 	{
-		std::cin >> a;
-		arr1[i] = a;
-	}
-	for (size_t e = 0; e < 30; e++)
-	{
-		arr2[e] = e + 1;
+		std::cin >> n;
+		arr2[i + 1] = n;
 	}
 	
-	for (size_t j = 0; j < 28; j++)
+	for (size_t i = 0; i < 30; i++)
 	{
-		for (size_t k = 0; k < 30; k++)
-		{
-			if (arr1[j] == arr2[k])
-			{
-				break;
-			}
-			b = arr[k]
-			
-		}
+		arr1[i + 1] = 31;
 	}
 
-	for (size_t t = 0; t < 30; t++)
+	for (size_t i = 0; i < 28; i++)
 	{
-		if (arr2[t] != 0)
+		arr1[i + 1] = arr2[i + 1];
+		
+	}
+	
+	for (size_t i = 0; i < 30; i++)
+	{
+		if (31 == arr1[i + 1])
 		{
-			std::cout << arr2[t] << " ";
+			std::cout << i + 1 << std::endl;
 		}
 	}
+	/*for (size_t i = 0; i < 31; i++)
+	{
+		if (arr1[i] > arr1[i + 1])
+		{
+			b = arr1[i];
+			arr1[i] = arr1[i + 1];
+			arr1[i + 1] = b;
+		}
+		else if(arr1[i] <= arr1[i + 1])
+		{
+			break;
+		}
+	}
+	if (arr1[0] > arr1[1])
+	{
+		std::cout << arr1[1] << std::endl;
+		std::cout << arr1[0];
+	}
+	else
+	{
+		std::cout << arr1[0] << std::endl;
+		std::cout << arr1[1];
+	}*/
+
 }
