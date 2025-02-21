@@ -18,31 +18,5 @@
     <ClCompile Include="marron_hw.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyCharacter.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="HeroAIController.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="HeroCharacter.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyAIController.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="EnemyCharacter.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="HeroAIController.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="HeroCharacter.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyAIController.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

@@ -127,17 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="EnemyAIController.cpp" />
-    <ClCompile Include="EnemyCharacter.cpp" />
-    <ClCompile Include="HeroAIController.cpp" />
-    <ClCompile Include="HeroCharacter.cpp" />
     <ClCompile Include="marron_hw.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="EnemyAIController.h" />
-    <ClInclude Include="EnemyCharacter.h" />
-    <ClInclude Include="HeroAIController.h" />
-    <ClInclude Include="HeroCharacter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
