@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e84ad6ca-0343-4320-a4c3-db33a6c9f2be}</ProjectGuid>
-    <RootNamespace>marronhw</RootNamespace>
+    <ProjectGuid>{5f420ebd-1fe0-4685-8f72-709de86f6243}</ProjectGuid>
+    <RootNamespace>test1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,17 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="EnemyAIController.cpp" />
-    <ClCompile Include="EnemyCharacter.cpp" />
-    <ClCompile Include="HeroAIController.cpp" />
-    <ClCompile Include="HeroCharacter.cpp" />
-    <ClCompile Include="marron_hw.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="EnemyAIController.h" />
-    <ClInclude Include="EnemyCharacter.h" />
-    <ClInclude Include="HeroAIController.h" />
-    <ClInclude Include="HeroCharacter.h" />
+    <ClCompile Include="test1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
